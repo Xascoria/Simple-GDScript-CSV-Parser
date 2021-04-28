@@ -1,0 +1,5 @@
+ID,Name,Dmg,Range
+int,,int,int
+00001,Sword,8,5
+00002,Shield,0,2
+00003,Dagger,5,3

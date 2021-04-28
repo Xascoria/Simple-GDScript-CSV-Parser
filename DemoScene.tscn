@@ -1,0 +1,102 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://DemoScene.gd" type="Script" id=1]
+[ext_resource path="res://Row.tscn" type="PackedScene" id=2]
+
+[node name="Root" type="Panel"]
+margin_right = 1280.0
+margin_bottom = 720.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 46.0
+text = "Parsed table from itemlist.csv"
+
+[node name="DemoTable" type="Control" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 104.0
+margin_bottom = 104.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Row1" parent="DemoTable" instance=ExtResource( 2 )]
+
+[node name="Row2" parent="DemoTable" instance=ExtResource( 2 )]
+margin_top = 40.0
+margin_bottom = 39.68
+
+[node name="Row3" parent="DemoTable" instance=ExtResource( 2 )]
+margin_top = 80.0
+margin_bottom = 79.68
+
+[node name="Row4" parent="DemoTable" instance=ExtResource( 2 )]
+margin_top = 120.0
+margin_bottom = 119.68
+
+[node name="Row5" parent="DemoTable" instance=ExtResource( 2 )]
+margin_top = 160.0
+margin_bottom = 159.68
+
+[node name="Row6" parent="DemoTable" instance=ExtResource( 2 )]
+margin_top = 200.0
+margin_bottom = 199.68
+
+[node name="Row7" parent="DemoTable" instance=ExtResource( 2 )]
+margin_top = 240.0
+margin_bottom = 239.68
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 368.0
+margin_right = 541.0
+margin_bottom = 382.0
+text = "Parsed typed table, all the variables inside are converted into a given type."
+
+[node name="TypedTable" type="Control" parent="."]
+margin_left = 64.0
+margin_top = 408.0
+margin_right = 104.0
+margin_bottom = 448.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Row1" parent="TypedTable" instance=ExtResource( 2 )]
+
+[node name="Row2" parent="TypedTable" instance=ExtResource( 2 )]
+margin_top = 40.0
+margin_bottom = 39.68
+
+[node name="Row3" parent="TypedTable" instance=ExtResource( 2 )]
+margin_top = 80.0
+margin_bottom = 79.68
+rect_pivot_offset = Vector2( -368, -192 )
+
+[node name="Row4" parent="TypedTable" instance=ExtResource( 2 )]
+margin_top = 120.0
+margin_bottom = 119.68
+rect_pivot_offset = Vector2( -368, -192 )
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 592.0
+margin_right = 288.0
+margin_bottom = 606.0
+text = "Query Result for ID == 2 for table 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Row1" parent="." instance=ExtResource( 2 )]
+margin_left = 64.0
+margin_top = 616.0
+margin_right = 64.0
+margin_bottom = 615.68
